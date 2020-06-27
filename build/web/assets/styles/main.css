@@ -1,0 +1,648 @@
+@font-face {
+    font-family: "Aclonica";
+    src: url("../fonts/aclonica.ttf");
+}
+
+@font-face {
+    font-family: "Constantia";
+    src: url("../fonts/constan.ttf");
+}
+
+@font-face {
+    font-family: "Trebuchet MS";
+    src: url("../fonts/trebuc.ttf");
+}
+
+body {
+    background: #f5f5f5;
+    background: rgba(102, 186, 1, .2) url("../images/bg.png");
+    font: 92% "Constantia", serif;
+    margin: 0;
+    padding: 0;
+}
+
+a, div, form, p, ul, ol, span, input, select, textarea, button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a, a:visited {
+    color: #45ba01;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+a.button:hover, a.close-button:hover {
+    text-decoration: none;
+}
+
+i.fa {
+    color: #990000;
+}
+
+input.text-input, textarea, select {
+    border: 1px solid #999;
+    padding: 0 .35em;
+    min-width: 10em !important;
+    height: 2.25em;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #666;
+}
+
+input.text-input, textarea {
+    border-top: 1px solid #0099ff;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+}
+
+select {
+    min-width: auto !important;
+    height: auto;
+}
+
+select, textarea {
+    padding: .35em;
+}
+
+textarea {
+    min-height: 10em;
+    font-size: 86%;
+}
+
+input[type=submit], button, .button {
+    display: inline-block;
+    background: #0099ff;
+    background: -webkit-linear-gradient(top, #0099ff, #333);
+    background: -moz-linear-gradient(bottom, #0099ff, #333);
+    background: linear-gradient(to bottom, #0099ff, #333);
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+    padding: .25em .5em !important;
+    border: none;
+    color: #eee !important;
+    cursor: pointer;
+    font: 92% "Trebuchet MS", sans-serif;
+}
+
+input[type=submit], .button-large {
+    padding: .75em 1.25em !important;
+}
+
+input.text-input:focus, textarea:focus {
+    border: none;
+    outline: 1px solid #0099ff;
+}
+
+input[type=submit]:focus, button:focus, .button:focus {
+    -webkit-box-shadow: 0 0 5px #0099ff;
+    -moz-box-shadow: 0 0 5px #0099ff;
+    box-shadow: 0 0 5px #0099ff;
+}
+
+h1, h2, h3, .heading {
+    font-family: "Aclonica", cursive;
+}
+
+p, h1, h2, h3, ul, ol {
+    padding: 0;
+    margin: .25em 0;
+}
+
+.centered-text {
+    text-align: center !important;
+}
+
+.clear-float {
+    clear: both;
+}
+
+.heading {
+    font-size: 140%;
+    margin: .25em 0;
+}
+
+.heading.heading-2x {
+    font-size: 280%;
+    text-align: center;
+    font-style: italic;
+    -webkit-text-shadow: 0 1px 0 #45ba01, 0 -1px 0 #fff;
+    -moz-text-shadow: 0 1px 0 #45ba01, 0 -1px 0 #fff;
+    text-shadow: 0 1px 0 #45ba01, 0 -1px 0 #fff;
+}
+
+.heading.heading-caption {
+    font: 120% "Trebuchet MS", sans-serif;
+}
+
+.panel {
+    border: 1px solid #333;
+    -webkit-box-shadow: 0 1px 2px #666;
+    -moz-box-shadow: 0 1px 2px #666;
+    box-shadow: 0 1px 2px #666;
+    padding: .5em;
+    text-align: left !important;
+}
+
+.panel > .panel-heading {
+    font-size: 120%;
+    margin-bottom: .75em;
+    padding: .5em;
+    color: #eee;
+    background: #333;
+    background: -webkit-linear-gradient(top, #0099ff, #333);
+    background: -moz-linear-gradient(bottom, #0099ff, #333);
+    background: linear-gradient(to bottom, #0099ff, #333);
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.panel > .panel-heading i.fa {
+    font-size: 120%;
+    vertical-align: bottom;
+    color: #0099ff;
+}
+
+.panel.panel-message {
+    position: relative;
+    border-color: #ff0000;
+}
+
+.panel.panel-message > .panel-heading {
+    font-size: 110%;
+    padding: .25em;
+}
+
+.panel.panel-message > .panel-heading i.fa {
+    color: #ff0000;
+}
+
+.panel.panel-message > .panel-body {
+    padding: 0 .25em;
+}
+
+.panel.panel-message .close-button {
+    position: absolute;
+    right: .5em;
+    top: .65em;
+    display: block;
+    font-size: 24px;
+    width: auto;
+    height: .5em;
+    line-height: .3em;
+    overflow: hidden;
+}
+
+.form {}
+
+.form input.text-input, textarea {
+    display: inline-block;
+    width: 45%;
+    min-width: 20em;
+}
+
+.form .formControl-group {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.form.form-labelled label {
+    display: inline-block;
+    min-width: 10em;
+}
+
+#global-container {
+    position: absolute;
+    z-index: 0;
+    min-height: 100%;
+    min-width: 980px;
+    width: 100%;
+}
+
+#header {
+    height: 7em;
+    background: #f5f5f5;
+    position: relative;
+    z-index: 1;
+    padding: .5em 0;
+}
+
+a#logo {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    position: relative;
+    left: 5%;
+}
+
+a#logo img {
+    width: auto;
+    height: 100%;
+}
+
+#banner {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    background: #f5f5f5;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+    padding-top: 7em;
+    z-index: 0;
+}
+
+#content {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    width: 100%;
+    min-height: 28em;
+}
+
+#content .content-box {
+    text-align: center;
+    padding: 1em 20%;
+    margin-top: 2em;
+}
+
+#content .content-box:nth-child(even) {
+    background: #f5f5f5;
+}
+
+#slideshow {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#slide-desc {
+    position: absolute;
+    top: 3em;
+    background: #333;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 160%;
+    padding: 1em;
+    max-width: 30em;
+}
+
+#slide-controls {
+    position: absolute;
+    right: 1em;
+    top: 4.5em;
+    padding: .5em;
+    background: #333;
+    background: rgba(0, 0, 0, .4);
+}
+
+#slide-controls span {
+    display: inline-block;
+    margin-right: .5em;
+    cursor: pointer;
+}
+
+#slide-controls i.fa {
+    color: #f5f5f5;
+}
+
+#slide-controls #next {
+    margin-right: 0;
+}
+
+.ss-item {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ss-img {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ss-img img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-desc {
+    display: none;
+}
+
+#nav-top {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    margin-top: -.75em;
+    color: #ddd;
+}
+
+#nav-top a {
+    display: inline-block;
+    padding: 0 .25em;
+}
+
+#nav-banner {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 30em;
+    width: 60%;
+    margin-left: -30%;
+    background: #333;
+    background: rgba(0, 0, 0, .8);
+    text-align: center;
+    padding: .75em 0;
+    border: 1px solid #000;
+    -webkit-box-shadow: 0 0 2px #fff inset;
+    -moz-box-shadow: 0 0 2px #fff inset;
+    box-shadow: 0 0 2px #fff inset;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+}
+
+#nav-banner a {
+    display: inline-block;
+    height: 100%;
+    font: 140% "Trebuchet MS", sans-serif;
+    margin-right: 5px;
+    background: #45ba01;
+    color: #eee;
+    padding: .5em;
+}
+
+#nav-banner a:last-child {
+    margin-right: 0;
+    background: #eecc00;
+    border-bottom: none;
+    color: #333;
+}
+
+#accom-gallery .gallery-item {
+    float: left;
+    width: 47.5%;
+    min-height: 30em;
+    border-bottom: 1px solid #990000;
+    padding: .5em 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+#accom-gallery .gallery-item:nth-child(odd) {
+    margin-right: 5%;
+}
+
+#gallery {
+    border: 1px solid #333;
+    -webkit-box-shadow: 0 1px 2px #666;
+    -moz-box-shadow: 0 1px 2px #666;
+    box-shadow: 0 1px 2px #666;
+    padding: .5em;
+}
+
+#gallery .gallery-item {
+    float: left;
+    width: 49.5%;
+    margin-bottom: .5em;
+    height: 15em;
+    min-width: 15em;
+    overflow: hidden;
+}
+
+#gallery .gallery-item:nth-child(odd) {
+    margin-right: 1%;
+}
+
+.price-tag {
+    font: 110% "Trebuchet MS", sans-serif;
+    color: #666;
+    background: #eee;
+    padding: .25em;
+    display: inline-block;
+}
+
+#booking-inf-prv {
+    text-align: center;
+    margin: 1em 0;
+}
+
+#admin-nav {
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    width: 20%;
+    height: 20em;
+    margin-top: -10em;
+    background: #333;
+    background: rgba(0, 0, 0, .6);
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: "Aclonica", cursive;
+}
+
+#admin-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#admin-nav .panel-body > ul {
+    margin: 0;
+}
+
+#admin-nav ul ul {
+    margin: .5em 0 .5em 1.25em;
+}
+
+#admin-nav li {
+    margin: .25em 0;
+}
+
+#admin-nav ul > li i.fa {
+    font-size: 80%;
+    vertical-align: middle;
+    color: #000;
+}
+
+#admin-nav li li i.fa {
+    font-size: 50%;
+    vertical-align: middle;
+    color: #0099ff;
+}
+
+.list-rooms {}
+
+.list-rooms .list-item {
+    float: left;
+    width: 10em;
+    width: -webkit-calc(100% / 5);
+    width: -moz-calc(100% / 5);
+    width: calc(100% / 5);
+    height: 10em;
+    text-align: center;
+    padding: .5em;
+    background: #f5f5f5;
+    overflow: hidden;
+    word-wrap: break-word;
+    cursor: pointer;
+    position: relative;
+}
+
+.list-rooms .list-item:nth-of-type(odd) {
+    background: rgba(102, 186, 1, .2);
+}
+
+.list-rooms .list-item span {
+    display: block;
+    margin-bottom: .25em;
+}
+
+.list-rooms .list-item span:first-child {
+    font: 120% "Trebuchet MS", sans-serif;
+}
+
+.list-rooms .list-item span:last-child {
+    margin-bottom: 0;
+}
+
+.list-rooms .list-item .li-opts {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: .5em 0;
+    text-align: center;
+    background: #333;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+}
+
+.list-rooms .list-item:hover .li-opts {
+    display: block;
+}
+
+.li-opts a {
+    display: inline-block;
+    margin-right: .35em;
+}
+
+.li-opts a:last-child {
+    margin-right: 0;
+}
+
+.li-opts i.fa {
+    color: #f5f5f5;
+}
+
+.booking-view {}
+
+.booking-view .panel-body {
+    padding: .5em;
+    background: #f5f5f5;
+}
+
+.booking-view .bv-box {
+    margin-bottom: 1em;
+}
+
+#addRoomForm {
+    margin: 1em 0;
+    border: 1px solid #666;
+    padding: .25em .5em;
+    background: -webkit-linear-gradient(top, rgba(102, 186, 1, .2), transparent);
+    background: -moz-linear-gradient(bottom, rgba(102, 186, 1, .2), transparent);
+    background: linear-gradient(to bottom, rgba(102, 186, 1, .2), transparent);
+}
+
+.pagination-links {
+    margin: 1em 0;
+    text-align: center !important;
+}
+
+.pagination-links a {
+    display: inline-block;
+    margin-right: .25em;
+    padding: .25em .5em;
+    background: #45ba01;
+    color: #f5f5f5;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+}
+
+.pagination-links a.current-page {
+    background: #990000;
+}
+
+.pagination-links a:last-child {
+    margin-right: 0;
+}
+
+#footer {
+    min-height: 5em;
+    margin: 0;
+}
+
+#footer img {
+    width: 15%;
+}
+
+#room-preview {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    width: 60%;
+    margin-left: -30%;
+    height: auto;
+    top: 10em;
+    background: #f5f5f5;
+    border: 1px solid #45ba01;
+    padding: 1em;
+    display: none;
+}
+
+#room-preview .list-item {
+    width: 100%;
+}
+
+.close-button {
+    font-size: 180%;
+    position: absolute;
+    height: .65em;
+    line-height: .5em;
+    right: .25em;
+    top: .25em;
+}
+
+/* Animations */
+.fade-in {
+    -webkit-animation: fadeIn .8s ease-in;
+    -moz-animation: fadeIn .8s ease-in;
+    animation: fadeIn .8s ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
